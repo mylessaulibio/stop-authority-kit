@@ -4,6 +4,8 @@ A free kit to answer one question: who can stop your AI agent, and how fast?
 
 This is not software you install. It is a short checklist, a one-page owner card, and a drill log. The full kit is in this file. Print it or fill it in as markdown.
 
+If blank forms make you stall, start with the filled-in examples in this repo. [A vendor invoice agent](examples/invoice-agent-worked-example.md) shows a completed card, a first drill that missed the queue, and the re-drill after they fixed it. [Your first stop drill](guides/first-stop-drill.md) walks through running one of your own in 30 minutes.
+
 This is a short operator kit, not a substitute for fuller frameworks such as [OWASP AISVS](https://github.com/OWASP/AISVS) and [BRACE](https://github.com/brace-ai-security/brace).
 
 ## Who it's for
@@ -17,6 +19,8 @@ If your agent only answers questions and cannot act, you may not need this yet.
 - The stop authority checklist
 - The stop owner card
 - The stop drill log
+
+Filled-in examples and the first-drill guide live in `examples/` and `guides/` in this repo.
 
 ## How to use this in 30 minutes
 
@@ -34,20 +38,13 @@ A few rules to keep in view while you fill the card and the checklist:
 - A rule the model has to remember can fade. A switch outside the model doesn't depend on its attention.
 - Hearing about a breach is not the power to stop it.
 
-## Want it set up for you?
+## More on this theme
 
-**The diagnosis is free. The cure is the setup.** This checklist shows you exactly where nobody can stop your agent; if you'd rather have it fixed than just know about it, Live AI Operations will name your stop owner, fill the card, and run your first drill with you.
-
-Book a session: https://calendly.com/myles-aihabits/score-read-back?utm_source=github&utm_campaign=stop-authority-kit
-
-Or email: myles@aihabits.ai
-
-**Scope:** This is a setup and stop drill, not a certification or a security assessment. It is not a promise the agent will not misbehave. The client remains the stop owner.
-
-## More from Live AI Operations
-
+- Website and best posts: https://aihabits.ai
 - Newsletter: https://clarityarchitecture.substack.com
 - Brake Drill, a short companion on the same theme: https://killswitch.aihabits.ai
+
+Questions or want a second pair of eyes on your first drill? myles@aihabits.ai
 
 This kit is free under the MIT License. Copyright Myles Saulibio, 2026.
 
