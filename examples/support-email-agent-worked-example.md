@@ -44,6 +44,6 @@ They left that on the card and in the log, and they added a follow-up: the docum
 
 ## Drill log
 
-| Date | Agent | Who pulled the stop | How the stop was pulled | Time to halt (minutes) | Writes halted? | Spend halted? | Reads still going? | What failed or stayed unclear | Follow-up | Signed by |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 5 Nov 2026 | Front Desk Reply | Jordan Hale | Turned off "Sends and refunds" (`reply_agent_send`) | Under 1 min for new sends; 6 already-accepted messages still went out | Partial | Yes. Test refund did not post | Yes | Mail provider queue was not part of the documented switch | Pause outbound mail at the provider as part of the stop. Re-drill in December. | Jordan Hale |
+| Date | Agent | Who pulled the stop | How the stop was pulled | Halt time (state unit) vs target | Actions after the stop | Reversible | Fixable after the fact | Permanent | Writes halted? | Spend halted? | What failed or stayed unclear | Follow-up | Permanent count signed by |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 5 Nov 2026 | Front Desk Reply | Jordan Hale | Turned off "Sends and refunds" (`reply_agent_send`) | Under 1 min for new sends; 6 already-accepted messages still went out | not recorded | not recorded | not recorded | not recorded | Partial | Yes. Test refund did not post | Mail provider queue was not part of the documented switch | Pause outbound mail at the provider as part of the stop. Re-drill in December. | not recorded (row signed by Jordan Hale) |

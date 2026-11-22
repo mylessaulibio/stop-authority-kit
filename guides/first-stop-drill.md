@@ -44,15 +44,17 @@ If the documented switch is not enough, stop the leftover work by hand so you ar
 
 ## What to measure
 
-You are trying to answer a short list, not produce a report.
+You are trying to answer a short list, not produce a long report.
 
-- Time from "stop pulled" to "no new writes or spend."
-- Whether that time is inside the maximum on the card.
+- Time from "stop pulled" to "the main agent halted," against the maximum on the card.
+- Total actions that still ran after the stop.
+- Of those, how many were reversible (and how each gets undone), how many were fixable after the fact, and how many were permanent (list what each one was).
+- The permanent count is the line the owner signs.
 - Whether writes halted, spend halted, and reads kept going.
 - What was already in flight, and whether it halted, finished, or waited for review.
 - What you had to do that was not on the card.
 
-A log that says "2 minutes, but 11 emails still went out" is a good log. It gives you the next fix.
+A log that says "2 minutes, but 11 emails still went out, and 11 were permanent" is a good log. It gives you the next fix.
 
 ## Ways this often goes sideways
 
@@ -68,7 +70,7 @@ A log that says "2 minutes, but 11 emails still went out" is a good log. It give
 
 ## After the drill (about 5 minutes)
 
-Update the card with the real halt time, the result, and the date. Copy the messy parts into the log, not only the clean ones.
+Update the card with the real halt time, the leftover counts (reversible, fixable after the fact, permanent), and the date. The owner signs the permanent count. Copy the messy parts into the log, not only the clean ones.
 
 Pick one follow-up, not ten. The usual one is: put the queue (or the mail provider, or the bank file) into the documented switch, then re-drill. Put a date on that re-drill while you are still in the room.
 

@@ -2,7 +2,7 @@
 
 A free kit to answer one question: who can stop your AI agent, and how fast?
 
-This is not software you install. It is a short checklist, a one-page owner card, and a drill log. Print them or fill them in as markdown.
+This is not software you install. It is a short checklist, a one-page owner card, a drill log, and a one-page result form. Print them or fill them in as markdown.
 
 If blank forms make you stall, start with a filled-in example. You will see how the card and the log look once they are filled in, including a first drill that did not go cleanly.
 
@@ -26,7 +26,8 @@ If your agent only answers questions and cannot act, you may not need this yet.
 
 - `checklist.md`: yes/no questions to find gaps in stop authority
 - `templates/stop-owner-card.md`: one page to name the agent, the stop owner, and how to halt
-- `templates/drill-log.md`: a simple table to record a stop drill
+- `templates/drill-log.md`: a simple table to record a stop drill, including leftover counts and a sign-off on the permanent count
+- `templates/one-page-result.md`: the one-page result form (halt time against target, reversible and permanent lists, owner sign-off on the permanent count)
 - `examples/invoice-agent-worked-example.md`: a filled card and two drill records for a fictional vendor invoice agent
 - `examples/support-email-agent-worked-example.md`: a shorter fictional example for a support inbox agent
 - `guides/first-stop-drill.md`: how to run your first drill in 30 minutes
@@ -36,7 +37,7 @@ If your agent only answers questions and cannot act, you may not need this yet.
 
 1. Copy `templates/stop-owner-card.md` and fill it in for one agent (about 10 minutes). If you cannot name a stop owner, a backup, and a way to halt that does not depend on the model, write "unknown" and keep going.
 2. Walk `checklist.md` and mark yes or no. Do not mark yes unless you can point to the switch, the person, or the log (about 15 minutes).
-3. Pick one gap. Plan a stop drill and add a row in `templates/drill-log.md` (about 5 minutes to plan). Run the drill when you can, then write down what actually halted and how long it took.
+3. Pick one gap. Plan a stop drill and add a row in `templates/drill-log.md` (about 5 minutes to plan). Run the drill when you can, then write down the halt time against the target, the leftover counts, and the permanent count the owner signs. Use `templates/one-page-result.md` for the list behind those counts.
 
 Do one agent first. Repeat for the next. The [first-drill guide](guides/first-stop-drill.md) walks through the run itself.
 

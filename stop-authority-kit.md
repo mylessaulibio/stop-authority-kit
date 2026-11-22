@@ -2,7 +2,7 @@
 
 A free kit to answer one question: who can stop your AI agent, and how fast?
 
-This is not software you install. It is a short checklist, a one-page owner card, and a drill log. The full kit is in this file. Print it or fill it in as markdown.
+This is not software you install. It is a short checklist, a one-page owner card, a drill log, and a one-page result form. The full kit is in this file. Print it or fill it in as markdown.
 
 If blank forms make you stall, start with the filled-in examples in this repo. [A vendor invoice agent](examples/invoice-agent-worked-example.md) shows a completed card, a first drill that missed the queue, and the re-drill after they fixed it. [Your first stop drill](guides/first-stop-drill.md) walks through running one of your own in 30 minutes.
 
@@ -19,6 +19,7 @@ If your agent only answers questions and cannot act, you may not need this yet.
 - The stop authority checklist
 - The stop owner card
 - The stop drill log
+- The one-page result form
 
 Filled-in examples and the first-drill guide live in `examples/` and `guides/` in this repo.
 
@@ -26,7 +27,7 @@ Filled-in examples and the first-drill guide live in `examples/` and `guides/` i
 
 1. Fill in the Stop owner card below for one agent (about 10 minutes). If you cannot name a stop owner, a backup, and a way to halt that does not depend on the model, write "unknown" and keep going.
 2. Walk the checklist below and mark yes or no. Do not mark yes unless you can point to the switch, the person, or the log (about 15 minutes).
-3. Pick one gap. Plan a stop drill and add a row in the Stop drill log below (about 5 minutes to plan). Run the drill when you can, then write down what actually halted and how long it took.
+3. Pick one gap. Plan a stop drill and add a row in the Stop drill log below (about 5 minutes to plan). Run the drill when you can, then write down the halt time against the target, the leftover counts, and the permanent count the owner signs.
 
 Do one agent first. Repeat for the next.
 
@@ -100,6 +101,7 @@ Hearing about a breach is not the power to stop it.
 ## Drills
 
 17. Have you run a stop drill on this agent and written the date and result in the drill log? Yes / No
+18. Did the drill result record halt time against the target, the total actions after the stop, and a split of those actions into reversible, fixable after the fact, and permanent, with the owner signing the permanent count? Yes / No
 
 After you finish, copy any "no" answers into a short gap list. Fix one gap, then run a drill and record it in the Stop drill log below.
 
@@ -127,10 +129,73 @@ One page. Fill this in for a single agent. If you do not know an answer, write "
 
 # Stop drill log
 
-Use one row per drill. A drill is a planned attempt to halt the agent, then a record of what actually stopped and how long it took.
+Use one row per drill. A drill is a planned attempt to halt the agent, then a record of what still ran after the stop, split by how hard each leftover is to undo.
 
-| Date | Agent | Who pulled the stop | How the stop was pulled | Time to halt (minutes) | Writes halted? | Spend halted? | Reads still going? | What failed or stayed unclear | Follow-up | Signed by |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  |  |  |  |
+Write the halt time in the unit you measured. Seconds are fine. Minutes are fine. State the unit.
+
+The permanent count is the line the owner signs.
+
+| Date | Agent | Who pulled the stop | How the stop was pulled | Halt time (state unit) vs target | Actions after the stop | Reversible | Fixable after the fact | Permanent | Writes halted? | Spend halted? | What failed or stayed unclear | Follow-up | Permanent count signed by |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+
+If you need the list behind the counts (what each reversible action needs in order to be undone, and what each permanent action was), fill in the one-page result form below.
+
+# Stop Test one-page result
+
+Live AI Operations.
+
+Use this as the one-page result of a stop test. Fill it from a log the agent cannot write to. Keep every leftover action in the Agent Attempt Record or in an appendix.
+
+## Header
+
+- Agent:
+- Test ID / run:
+- Date and time of stop (with time zone):
+- Environment (sandbox / test account):
+- Stop pulled by (name, primary or backup):
+- How the stop was pulled (the actual switch):
+- Target agreed before the test: halt within ______ (unit: ______)
+
+## Result table
+
+| Measure | Target | Actual |
+|---|---|---|
+| Stop time (stop pulled to main agent halted) | | |
+| Total actions after the stop | | |
+| Reversible after the stop | | |
+| Fixable after the fact | | |
+| Permanent after the stop | | |
+| Time to the last action after the stop | | |
+
+The three class counts must add up to the total actions after the stop.
+
+## Reversible actions (how each gets undone)
+
+| # | What it was | From | How it gets undone | Owner |
+|---|---|---|---|---|
+| | | | | |
+
+If none, write "None."
+
+## Permanent actions (the list the owner signs)
+
+| # | What it was | From | Target | What follow-up is possible |
+|---|---|---|---|---|
+| | | | | |
+
+If none, write "None."
+
+Fixable-after-the-fact actions (already happened, correction still possible) can be listed under the appendix. They are not reversible, and they are not the sign-off line.
+
+## Owner sign-off on the permanent count
+
+Permanent actions after the stop: ______
+
+I have reviewed the list of permanent actions above. The permanent count is the number I am signing. A halt time alone is not the result.
+
+Stop owner: ______________________  Date: ______________________
+
+Scope: a timed stop test, not a certification or a security assessment. It does not promise the agent will not misbehave.

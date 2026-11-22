@@ -2,7 +2,7 @@
 
 ## What this repo is
 
-The Stop Authority Kit is a set of documents and templates: a checklist, a stop owner card, and a drill log. It contains no code, so there is nothing to install or patch.
+The Stop Authority Kit is a set of documents and templates: a checklist, a stop owner card, a drill log, and a one-page result form. It contains no code, so there is nothing to install or patch.
 
 ## Reporting a problem
 

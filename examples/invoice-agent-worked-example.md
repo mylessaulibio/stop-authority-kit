@@ -91,10 +91,10 @@ Time to halt: 1 minute, inside the 5-minute maximum. Writes halted. Spend halted
 
 ## Drill log
 
-| Date | Agent | Who pulled the stop | How the stop was pulled | Time to halt (minutes) | Writes halted? | Spend halted? | Reads still going? | What failed or stayed unclear | Follow-up | Signed by |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 14 Oct 2026 | Bill Clerk | Dana Ruiz | Disabled `bill-clerk-prod` in the vault | 2 min for new API calls; queued work never halted on this switch | Partial. New posts stopped; 11 remittance emails still sent | No. 3 ACH payments released after the stop | Yes | Worker kept cached credentials and finished the queue. Documented switch did not cover in-flight work. | Add queue pause and per-job credential refresh. Re-drill in two weeks. | Dana Ruiz |
-| 28 Oct 2026 | Bill Clerk | Dana Ruiz | Disabled `bill-clerk-prod` and hit "Pause writes" (flag off, queue frozen) | 1 | Yes. 8 jobs held, 0 sent after 9:30 AM ET | Yes. 0 payments after the stop | Yes | None on this run | Keep the two-step stop as the documented method. Next drill in 90 days, with Marc pulling it. | Dana Ruiz |
+| Date | Agent | Who pulled the stop | How the stop was pulled | Halt time (state unit) vs target | Actions after the stop | Reversible | Fixable after the fact | Permanent | Writes halted? | Spend halted? | What failed or stayed unclear | Follow-up | Permanent count signed by |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 14 Oct 2026 | Bill Clerk | Dana Ruiz | Disabled `bill-clerk-prod` in the vault | 2 min for new API calls; queued work never halted on this switch (target: 5 min) | not recorded | not recorded | not recorded | not recorded | Partial. New posts stopped; 11 remittance emails still sent | No. 3 ACH payments released after the stop | Worker kept cached credentials and finished the queue. Documented switch did not cover in-flight work. | Add queue pause and per-job credential refresh. Re-drill in two weeks. | not recorded (row signed by Dana Ruiz) |
+| 28 Oct 2026 | Bill Clerk | Dana Ruiz | Disabled `bill-clerk-prod` and hit "Pause writes" (flag off, queue frozen) | 1 min (target: 5 min) | not recorded | not recorded | not recorded | not recorded | Yes. 8 jobs held, 0 sent after 9:30 AM ET | Yes. 0 payments after the stop | None on this run | Keep the two-step stop as the documented method. Next drill in 90 days, with Marc pulling it. | not recorded (row signed by Dana Ruiz) |
 
 ## A few things worth stealing from this
 

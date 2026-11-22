@@ -50,5 +50,6 @@ Hearing about a breach is not the power to stop it.
 ## Drills
 
 17. Have you run a stop drill on this agent and written the date and result in the drill log? Yes / No
+18. Did the drill result record halt time against the target, the total actions after the stop, and a split of those actions into reversible, fixable after the fact, and permanent, with the owner signing the permanent count? Yes / No
 
 After you finish, copy any "no" answers into a short gap list. Fix one gap, then run a drill and record it in `templates/drill-log.md`.
